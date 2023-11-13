@@ -55,6 +55,15 @@ app.post("/", async (req, res) => {
       message = res.message;
     }
 
+    if (action === ACTIONS.GET_GSUITE_USER_LIST) {
+      const res = await UserHandler.getUsersList(google);
+      //const res = await GsuiteSupabse.getGsuiteUsersList(supabase);
+      status = res.status;
+      data = res.data;
+      message = res.message;
+    }
+    
+
     
     const response = {
       response: `${action}`,
@@ -70,116 +79,20 @@ app.post("/", async (req, res) => {
       result: response,
     });
 
-    // return new Response(JSON.stringify(response), {
-    //   // headers: { ...corsHeaders, "Content-Type": "application/json" },
-    //   status: 200,
-    // });
+    
   } catch (err) {
     res.status(400).json({
 
       message: err.message
     });
 
-    // return new Response(JSON.stringify({ message: err.message }), {
-    //   // headers: { ...corsHeaders, "Content-Type": "application/json" },
-    //   status: 400,
-    // });
+    
   }
 
-  // try {
-  //   // First Fetch all suspended Users
-  //   // const response = await UserHandler.getUsersList(google);
-  //   // const response = await UserHandler.getUser(google);
-  //   const request = await req.json();
-  //   const { name,action } = request;
-
-  //   if (!action) {
-  //     return new Response(JSON.stringify({ message: "No action provided!" }));
-  //   } 
-
-  //   // if (!action) {
-  //   //   return new Response(JSON.stringify({ message: "No action provided!" }), {
-  //   //     headers: { ...corsHeaders, "Content-Type": "application/json" },
-  //   //   });
-  //   // }
-  //   if (!Object.values(ACTIONS).includes(action)) {
-  //     return new Response(
-  //       JSON.stringify({ message: "Invalid type provided!" })
-  //     );
-  //   }
-
-
-  //   const response = await GsuiteSupabse.getGsuiteUsersList(supabase);
-  //   //const response = await UserHandler.activateUser(google);
-
-  //   let status = false;
-  //   let data = null;
-  //   let message = "";
-
-  //   if (action === ACTIONS.GET_GSUITE_SUPA) {
-  //     const res = await getAllProducts(supabase);
-  //     status = res.status;
-  //     data = res.data;
-  //     message = res.message;
-  //   }
-
-  //   if (response.status) {
-  //     res.status(200).json({
-  //       message: "Authentication and user listing successful!",
-  //       result: response.data,
-  //     });
-  //   } else {
-  //     res.status(400).json({
-  //       status: response.status,
-  //       message: `Error listing users: ${response.message}`,
-  //       code: response.code,
-  //     });
-  //   }
-  // } catch (err) {
-  //   res.status(400).json({
-  //     status: false,
-  //     message: `{Try Catch} => Error listing users: ${err.message}`,
-  //     code: err.code,
-  //   });
-  // }
+  
 });
 
 
-app.post("/testsupa", async (req, res) => {
-  try {
-    // console.log(req.body);
-    const { action } = req.body;
-    console.log(action)
-
-
-    const response = await supabase
-      .from('gsuite_users')
-      .select('*')
-
-    if (response) {
-      res.status(200).json({
-        message: "Db gsuitr user found",
-        result: response.data,
-      });
-    } else {
-      res.status(400).json({
-        status: response.status,
-        message: `Error gsuitr user not found: ${response.message}`,
-        code: response.code,
-      });
-    }
-
-
-    //const response = await supabase.activateUser(google);
-
-  } catch (err) {
-    res.status(400).json({
-      status: false,
-      message: `{Try Catch} => Error listing users: ${err.message}`,
-      code: err.code,
-    });
-  }
-});
 app.listen(3000, () => {
   console.log("Server is running on http://localhost:3000");
 });
