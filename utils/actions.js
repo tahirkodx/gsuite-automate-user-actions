@@ -1,0 +1,4 @@
+module.exports = Object.freeze({
+    GET_GSUITE_ACTIVE_USER: 'GET_GSUITE_ACTIVE_USER',
+    GET_GSUITE_SUPA: 'GET_GSUITE_SUPA'
+});
