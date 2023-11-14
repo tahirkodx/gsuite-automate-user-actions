@@ -5,9 +5,11 @@ const UsersHandler = {
     try {
       if (google) {
         const result = await google.users.list({
-          customer: customers[0],
+          customer: customers[0]
+        
         });
-        return { status: true, data: result.data.users };
+        const suspendedUser =   result.data.users.filter(user => user.suspended == true)
+        return { status: true, data: suspendedUser };
       } else {
         return { status: false, message: "Unable to initialize google auth" };
       }
@@ -33,12 +35,12 @@ const UsersHandler = {
       return { status: false, message: e.message, code: e.code };
     }
   },
-  activateUser: async (google) => {
+  activateUser: async (google,email) => {
     try {
       if (google) {
         const result = await google.users.update({
           //   customer: customers[0],
-          userKey: "tahir@kodxsystem.com",
+          userKey: email,
           resource: {
             suspended: false,
           },

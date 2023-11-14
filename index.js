@@ -48,7 +48,7 @@ app.post("/", async (req, res) => {
       message = res.message;
     }
     if (action === ACTIONS.GET_GSUITE_ACTIVE_USER) {
-      const res = await UserHandler.activateUser(google);
+      const res = await UserHandler.activateUser(google,'tahir@kodxsystem.com');
       //const res = await GsuiteSupabse.getGsuiteUsersList(supabase);
       status = res.status;
       data = res.data;
@@ -62,6 +62,18 @@ app.post("/", async (req, res) => {
       data = res.data;
       message = res.message;
     }
+    if (action === ACTIONS.CREATE_GSUITE_USER) {
+      const getGsuiteUserList =  await UserHandler.getUsersList(google);
+      //console.log(getGsuiteUserList)
+
+      const res = await GsuiteSupabse.createGsuiteUsersList(supabase,getGsuiteUserList,google);
+      
+      status = res.status;
+      data = res.data;
+      message = res.message;
+    }
+
+    
     
 
     
