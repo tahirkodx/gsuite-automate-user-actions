@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "axiomatic-jet-405710",
+  "private_key_id": "de67470dbbde2dd906eb62c19106f6cc7160f2b0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCoKxPKVo7508/A\nTpwXqdm609nMLoo4oS1ZRZIL/r1wCjizZ2957GDD21gB6CsJW/jJ0LpmaYgG5oH7\nulXLdBRPyYOZ9AZ3KchRbpGDV3yunq2wu0/QOn+g7T+GYkvKCdNe67cH8S7IF7KO\ngtmyVFb59A8/E0JJTeLZb2v7uZ072JOnfzpW0vT6TfdKoFKYG7B8RSDrqAzEPOAO\nTufDkGGjZgFhQAE/ze6E65nprhw9mtdot3j1J+hsbXGCKfAhXQ8PcksfoI5edKuy\nitM0IdMSU7k61tQU7twQSqqd6g26E2frPc8Nye3kqYATTvYVZPlasum0TWp0Fdn8\ngxVHWK69AgMBAAECggEAFD3vKWVG23Jv6M1tg3mp4A+dATM+5vcbnsm9fR0iD0jj\nr1CNfgcCVMDjtIMOHxfHd/9cWHRub6oyTisNJaqowTvXz+GsH47Tcl3VPRJ8SwaF\nkKbTQhSwhR3ZjiLpzX1mSGAmDVouD96uWvIMIyd8uqRya1y1l149Jn//ZvLeJrRG\neyAS+YG5GuHIbhQuUJMWL5GC9a+S1bplo0mGcFq0qpimfJTog0fuMZ70CRHBCmgH\nn9mm6dKhEakvnRXogu+25z8LgSdLHsYLqA7+lYmevtv91EFjg1KwaAEalhQG16nj\nBdGH9AEMXKuKZScqOnV3pcDUUftFlomnizHUrHndTwKBgQDZ35GizFa5x6AMPCon\nD1s0FP3AOzu/dOHbKBJrGu7iUFvI31s6VIY5C+7EL9CBaFDEZVxnMBLb669igiTL\nkZV2CvN7ChOZunlx4mG3XG76hgD9y2P4479vakPfBxSnF9qm4yIweyYCkqiRi5E1\nWIfVGUFa6JD+rBaROBDGSxigZwKBgQDFmMoR1bgzELSX3pdCNcZJVa7qdYE7qZC/\njxze/jw+2Rs5GakHfjWy28itzxil8V/hl5bBwm+cSiY84PqPanfqkkwhYxHKTemX\nHDEBmpWUuTaXBA6R5EhwDLzdsRFPeQhDpUGlC8CUNhTjR3vUctFLB2tsA1s1OAfp\n9n32k0gxOwKBgQCP2tZGL7VzpSM/8NnEQJdvpAyHyJSCraITGjpPDdF9DKIN16xc\nr0KQmBhm4UtCpqXthx+j4lIRc2SyHkw9PTr6XfC15MlcT4uwblEmyJleQOyWppyz\n0WytG/UEZaB1U4LDfmUsraNDP6KdtxGBr5rAUZSdecGC5g1ghSxOQXdZMQKBgH4b\nbwtG3NIqXTd3pg1piG0RNBsKdzn+lBTNX12p4AU0Rj2A9PGFSPwnbMIQo+h0Tf8J\n4fsy/kw+vnyoEQEqr/GTAOdl9NqqMuRv547ge4p5Ui+7NRlDGj/4wSizcxrHYdDa\nTTTqdTOh+F69JniF9rDtwU8kLTef1N0qpWWSxcY1AoGAL1B3EfBZ13q0Vvnpg6H3\nVK4nNqClFPU0bEW6WoEMr2QaqV+StkWcICpRZnYW/A4MN1hfxPkdy4/5iys55upw\n0+NcX8VMnVhuUtprBTE0ONUBebuPniTcLRBdu66Vc942OKWscyWyeD63RG7pFypo\nckBI0ZiygXeNAktJdLaTJIE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "service-admin@axiomatic-jet-405710.iam.gserviceaccount.com",
+  "client_id": "108947705152844458978",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/service-admin%40axiomatic-jet-405710.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

@@ -48,7 +48,7 @@ app.post("/", async (req, res) => {
     if (action === ACTIONS.GET_GSUITE_ACTIVE_USER) {
       const res = await UserHandler.activateUser(
         google,
-        "tahir@kodxsystem.com"
+        "aljona@leadmate.tech"
       );
       status = res.status;
       data = res.data;

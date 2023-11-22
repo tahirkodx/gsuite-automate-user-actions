@@ -1,6 +1,7 @@
 const { google } = require("googleapis");
 const { JWT } = require("google-auth-library");
-const keyFile = "./service-account.json";
+// const keyFile = "./service-account.json";
+const keyFile = "./axiomatic-jet-405710-de67470dbbde.json";
 const scopes = [
   "https://www.googleapis.com/auth/admin.directory.user",
   "https://www.googleapis.com/auth/admin.directory.user.readonly",
@@ -8,7 +9,8 @@ const scopes = [
   "https://www.googleapis.com/auth/admin.directory.user.security",
   "https://www.googleapis.com/auth/admin.directory.group",
 ];
-const targetUserEmail = "admin@kodxsystem.com";
+// const targetUserEmail = "admin@kodxsystem.com";
+const targetUserEmail = "admin@leadmate.tech";
 
 const authInit = () => {
   try {
@@ -25,7 +27,8 @@ const authInit = () => {
   }
 };
 
-const customers = ["C03oey03l"];
+// const customers = ["C03oey03l"];
+const customers = ["C02sawyjl"];
 const searchKeys = {
   suspended: "C03oey03l",
 };
