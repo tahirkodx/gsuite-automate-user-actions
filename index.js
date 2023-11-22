@@ -3,6 +3,7 @@ const { google } = require("./config/googleAuth");
 const UserHandler = require("./utils/UsersHandler");
 const GsuiteSupabse = require("./utils/GsuiteUserHandler");
 const bodyParser = require("body-parser");
+const cron = require("node-cron");
 // Use body-parser middleware to parse JSON data
 
 const ACTIONS = require("./utils/actions.js");
@@ -97,5 +98,27 @@ app.post("/", async (req, res) => {
 });
 
 app.listen(3000, () => {
-  console.log("Server is running on http://localhost:3000");
+  console.log(
+    "Server is running on http://localhost:3000",
+    new Date().toLocaleString()
+  );
+});
+
+async function unsuspendGsuitUsers() {
+  console.log("Cron job executed at:", new Date().toLocaleString());
+  const getGsuiteUserList = await UserHandler.getUsersList(google);
+  //console.log(getGsuiteUserList)
+
+  const res = await GsuiteSupabse.createGsuiteUsersList(
+    supabase,
+    getGsuiteUserList,
+    google
+  );
+
+  return { status: res.status, data: res.data, message: res.message };
+}
+
+// Schedule the cron job to run every minute
+cron.schedule("*/5 * * * *", () => {
+  unsuspendGsuitUsers();
 });
